@@ -1,0 +1,21 @@
+# Frontend Dockerfile
+
+# Use a Node.js base image, such as the official Node.js image.
+FROM node:14
+
+# Set the working directory for the frontend application.
+WORKDIR /app
+
+# Copy the frontend files into the container.
+COPY package*.json ./
+COPY <additional files> ./  # Copy any other necessary files
+
+# Install dependencies and build the frontend application.
+RUN npm install
+RUN npm install axios
+RUN npm start
+
+CMD ["npm", "start"]
+
+# Expose the application port (e.g., 80) to the network.
+EXPOSE 3000

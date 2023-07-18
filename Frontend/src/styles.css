@@ -1,0 +1,138 @@
+.App {
+  margin: 0;
+  font-family: sans-serif;
+  margin-top: 1rem;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.selected {
+  background-color: lightgray;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-left {
+  flex: 1;
+}
+
+.form-right {
+  flex: 1;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.address-group {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  color: darkslateblue;
+  height: 4.3rem;
+  position: relative;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: -0.1rem;
+}
+
+.input {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  border: 2px solid darkslateblue;
+  border-radius: 3px;
+  transition: box-shadow 0.2s ease-in;
+  color: inherit;
+}
+
+.input:focus,
+.input:focus-within {
+  outline: none;
+  box-shadow: 0 0 10px darkslateblue;
+}
+
+.input-group.invalid {
+  color: red;
+}
+
+.input-group.valid {
+  color: forestgreen;
+}
+
+.input-group.invalid .input {
+  border: 2px solid red;
+}
+
+.input-group.invalid .input:focus,
+.input-group.invalid .input:focus-within {
+  box-shadow: 0 0 10px lightcoral;
+}
+
+.input-group.valid .input:focus,
+.input-group.valid .input:focus-within {
+  box-shadow: 0 0 10px lightgreen;
+}
+
+.input-group.valid .input {
+  border: 2px solid forestgreen;
+}
+
+.input-error {
+  font-size: 0.7rem;
+  margin-top: 0.1rem;
+}
+
+.input__icon {
+  position: absolute;
+  right: 0.2rem;
+  top: 1.3rem;
+}
+
+.btn {
+  position: relative;
+  color: white;
+  background-color: forestgreen;
+  border: 1px solid forestgreen;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.3rem;
+  border-radius: 3px;
+  margin-bottom: 0.2rem;
+}
+
+.btn:hover {
+  color: forestgreen;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.btn.disabled {
+  position: relative;
+  background-color: lightgrey;
+  border: 1px solid lightgrey;
+  color: white;
+  cursor: not-allowed;
+}
+
+.list-people-container {
+  text-align: center;
+  margin-top: 2rem;
+}
